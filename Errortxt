@@ -10,39 +10,70 @@ import com.example.frbasequizapp.databinding.ActivitySighUpBinding
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 
+//class SighUp : AppCompatActivity() {
+
+//
+//     private lateinit var firebaseAuth: FirebaseAuth
+//
+//   // private  val _binding : ActivitySighUpBinding? = null
+//   private val _binding: ActivitySighUpBinding = ActivitySighUpBinding.inflate(layoutInflater)
+//    private  val binding get() = _binding
+//
+//
+//
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+////        val btnSighUp2 = findViewById<Button>(R.id.btnSignUp)
+//
+//        super.onCreate(savedInstanceState)
+//        setContentView(binding.root)
+//        firebaseAuth =FirebaseAuth.getInstance()
+//        binding.btnSignUp.setOnClickListener{
+//            signUpUsers()
+//        }
+//        val tvToLogin1 = findViewById<TextView>(R.id.tvToLogin)
+//        tvToLogin1.setOnClickListener{
+//            val intent1 = Intent(this,LoginPage::class.java )
+//            startActivity(intent1)
+//            finish()
+//        }
+//        val btnSighUp1 = findViewById<Button>(R.id.btnSignUp)
+//        btnSighUp1.setOnClickListener{
+//            val intent1 = Intent(this,MainActivity::class.java )
+//            startActivity(intent1)
+//            finish()
+//        }
 class SighUp : AppCompatActivity() {
 
-
-     private lateinit var firebaseAuth: FirebaseAuth
-
-   // private  val _binding : ActivitySighUpBinding? = null
-   private val _binding: ActivitySighUpBinding = ActivitySighUpBinding.inflate(layoutInflater)
-    private  val binding get() = _binding!!
-
-
-
+    private lateinit var firebaseAuth: FirebaseAuth
+    private val _binding: ActivitySighUpBinding = ActivitySighUpBinding.inflate(layoutInflater)
+    private val binding get() = _binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-//        val btnSighUp2 = findViewById<Button>(R.id.btnSignUp)
-
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-        firebaseAuth =FirebaseAuth.getInstance()
-        binding.btnSignUp.setOnClickListener{
+        setContentView(binding.root) // Use binding.root to set the content view
+
+        firebaseAuth = FirebaseAuth.getInstance()
+
+        binding.btnSignUp.setOnClickListener {
             signUpUsers()
         }
+
         val tvToLogin1 = findViewById<TextView>(R.id.tvToLogin)
-        tvToLogin1.setOnClickListener{
-            val intent1 = Intent(this,LoginPage::class.java )
+        tvToLogin1.setOnClickListener {
+            val intent1 = Intent(this, LoginPage::class.java)
             startActivity(intent1)
             finish()
         }
+
         val btnSighUp1 = findViewById<Button>(R.id.btnSignUp)
-        btnSighUp1.setOnClickListener{
-            val intent1 = Intent(this,MainActivity::class.java )
+        btnSighUp1.setOnClickListener {
+            val intent1 = Intent(this, MainActivity::class.java)
             startActivity(intent1)
             finish()
         }
+    
+
     }
 
     private fun signUpUsers() {
@@ -75,14 +106,11 @@ class SighUp : AppCompatActivity() {
 
 
 
-///////////////////////////////
-error log
+////////////////////////////////////////////////////
 
 
-
-2023-09-14 16:37:55.559 27196-27196 AndroidRuntime          com.example.frbasequizapp            D  Shutting down VM
-2023-09-14 16:37:55.562 27196-27196 AndroidRuntime          com.example.frbasequizapp            E  FATAL EXCEPTION: main
-                                                                                                    Process: com.example.frbasequizapp, PID: 27196
+   E  FATAL EXCEPTION: main
+                                                                                                    Process: com.example.frbasequizapp, PID: 27519
                                                                                                     java.lang.RuntimeException: Unable to instantiate activity ComponentInfo{com.example.frbasequizapp/com.example.frbasequizapp.SighUp}: java.lang.NullPointerException: Attempt to invoke virtual method 'android.view.LayoutInflater android.view.Window.getLayoutInflater()' on a null object reference
                                                                                                     	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3194)
                                                                                                     	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3409)
@@ -98,7 +126,7 @@ error log
                                                                                                     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
                                                                                                     Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'android.view.LayoutInflater android.view.Window.getLayoutInflater()' on a null object reference
                                                                                                     	at android.app.Activity.getLayoutInflater(Activity.java:4926)
-                                                                                                    	at com.example.frbasequizapp.SighUp.<init>(SighUp.kt:19)
+                                                                                                    	at com.example.frbasequizapp.SighUp.<init>(SighUp.kt:49)
                                                                                                     	at java.lang.Class.newInstance(Native Method)
                                                                                                     	at android.app.AppComponentFactory.instantiateActivity(AppComponentFactory.java:95)
                                                                                                     	at androidx.core.app.CoreComponentFactory.instantiateActivity(CoreComponentFactory.java:45)
@@ -115,3 +143,4 @@ error log
                                                                                                     	at java.lang.reflect.Method.invoke(Native Method) 
                                                                                                     	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492) 
                                                                                                     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930) 
+2023-09-14 16:58:22.268  2029-27568 DropBoxManagerService   system_process                       I  add tag=data_app_crash isTagEnabled=true flags=0x2
