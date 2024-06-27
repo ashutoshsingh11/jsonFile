@@ -1,0 +1,44 @@
+[
+  {
+    "weather": "Cloudy",
+    "teperature": "30",
+    "palce": "Delhi",
+    "img": ""
+  },
+  {
+    "weather": "Rainy",
+    "teperature": "30",
+    "palce": "Bengaluru",
+    "img": ""
+  },
+  {
+    "weather": "Snowy",
+    "teperature": "30",
+    "palce": "Shimla",
+    "img": ""
+  },
+  {
+    "weather": "Fogy",
+    "teperature": "30",
+    "palce": "Dargeling",
+    "img": ""
+  },
+  {
+    "weather": "Sunny",
+    "teperature": "30",
+    "palce": "Delhi",
+    "img": ""
+  },
+  {
+    "weather": "Frost",
+    "teperature": "30",
+    "palce": "Delhi",
+    "img": ""
+  },
+  {
+    "weather": "Tornado",
+    "teperature": "30",
+    "palce": "Delhi",
+    "img": ""
+  }
+]
